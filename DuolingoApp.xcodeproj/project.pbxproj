@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F23602621C36A1F0035CDFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23602521C36A1F0035CDFA /* AppDelegate.swift */; };
+		7F23602B21C36A1F0035CDFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F23602921C36A1F0035CDFA /* Main.storyboard */; };
+		7F23602D21C36A240035CDFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F23602C21C36A240035CDFA /* Assets.xcassets */; };
+		7F23603021C36A240035CDFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F23602E21C36A240035CDFA /* LaunchScreen.storyboard */; };
+		7F23604F21C372DC0035CDFA /* DUOChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23604E21C372DC0035CDFA /* DUOChallengeViewController.swift */; };
+		7F23605021C372DC0035CDFA /* DUOChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23604E21C372DC0035CDFA /* DUOChallengeViewController.swift */; };
+		7F23605221C373CD0035CDFA /* DUOLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23605121C373CD0035CDFA /* DUOLocation.swift */; };
+		7F23605321C373CD0035CDFA /* DUOLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23605121C373CD0035CDFA /* DUOLocation.swift */; };
+		7F23605521C37A2F0035CDFA /* DUOLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23605421C37A2F0035CDFA /* DUOLocationTests.swift */; };
+		7F23605B21C4717E0035CDFA /* DUOChallengeProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23605A21C4717E0035CDFA /* DUOChallengeProtocolTests.swift */; };
+		7F23605D21C471EC0035CDFA /* DUOChallengeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23605C21C471EC0035CDFA /* DUOChallengeProtocol.swift */; };
+		7F23605E21C471EC0035CDFA /* DUOChallengeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23605C21C471EC0035CDFA /* DUOChallengeProtocol.swift */; };
+		7F23606021C48E940035CDFA /* DUOChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23605F21C48E940035CDFA /* DUOChallengeManager.swift */; };
+		7F23606121C48E940035CDFA /* DUOChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23605F21C48E940035CDFA /* DUOChallengeManager.swift */; };
+		7F23606321C493290035CDFA /* DUOChallengeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23606221C493290035CDFA /* DUOChallengeManagerTests.swift */; };
+		7F23606521C4A85F0035CDFA /* DUOChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23606421C4A85F0035CDFA /* DUOChallenge.swift */; };
+		7F23606621C4A85F0035CDFA /* DUOChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23606421C4A85F0035CDFA /* DUOChallenge.swift */; };
+		7F47D27F21C4C38B00761B54 /* DUOChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D27E21C4C38B00761B54 /* DUOChallengeTests.swift */; };
+		7F47D28121C59CA100761B54 /* DUOChallengesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28021C59CA100761B54 /* DUOChallengesFactory.swift */; };
+		7F47D28221C59CB000761B54 /* DUOChallengesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28021C59CA100761B54 /* DUOChallengesFactory.swift */; };
+		7F47D28421C5A58500761B54 /* DUOChallengesFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28321C5A58500761B54 /* DUOChallengesFactoryTests.swift */; };
+		7F47D28621C5D25700761B54 /* DUOServicesImplementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28521C5D25700761B54 /* DUOServicesImplementer.swift */; };
+		7F47D28821C5D59800761B54 /* DUOServicesImplementerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28721C5D59800761B54 /* DUOServicesImplementerTests.swift */; };
+		7F47D28921C5D60600761B54 /* DUOServicesImplementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28521C5D25700761B54 /* DUOServicesImplementer.swift */; };
+		7F47D28B21C5FA6100761B54 /* DUOChallengeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28A21C5FA6100761B54 /* DUOChallengeInteractor.swift */; };
+		7F47D28C21C5FA6100761B54 /* DUOChallengeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28A21C5FA6100761B54 /* DUOChallengeInteractor.swift */; };
+		7F47D28E21C5FC1F00761B54 /* DUOChallengeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28D21C5FC1F00761B54 /* DUOChallengeInteractorTests.swift */; };
+		7F47D29121C6319A00761B54 /* DUOCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28F21C6319A00761B54 /* DUOCollectionViewCell.swift */; };
+		7F47D29221C6319A00761B54 /* DUOCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D28F21C6319A00761B54 /* DUOCollectionViewCell.swift */; };
+		7F47D29321C6319A00761B54 /* DUOCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F47D29021C6319A00761B54 /* DUOCollectionViewCell.xib */; };
+		7F47D29421C6319A00761B54 /* DUOCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F47D29021C6319A00761B54 /* DUOCollectionViewCell.xib */; };
+		7F47D29621C6C3E600761B54 /* DUOChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D29521C6C3E600761B54 /* DUOChallengeViewModel.swift */; };
+		7F47D29721C6C3E600761B54 /* DUOChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D29521C6C3E600761B54 /* DUOChallengeViewModel.swift */; };
+		7F47D29C21C6D0BB00761B54 /* DUOChallengeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47D29B21C6D0BB00761B54 /* DUOChallengeViewModelTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F23603721C36A240035CDFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F23601A21C36A1F0035CDFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F23602121C36A1F0035CDFA;
+			remoteInfo = DuolingoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F23602221C36A1F0035CDFA /* DuolingoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuolingoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F23602521C36A1F0035CDFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F23602A21C36A1F0035CDFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F23602C21C36A240035CDFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F23602F21C36A240035CDFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F23603121C36A240035CDFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F23603621C36A240035CDFA /* DuolingoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuolingoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F23603C21C36A240035CDFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F23604E21C372DC0035CDFA /* DUOChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengeViewController.swift; sourceTree = "<group>"; };
+		7F23605121C373CD0035CDFA /* DUOLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOLocation.swift; sourceTree = "<group>"; };
+		7F23605421C37A2F0035CDFA /* DUOLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOLocationTests.swift; sourceTree = "<group>"; };
+		7F23605A21C4717E0035CDFA /* DUOChallengeProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengeProtocolTests.swift; sourceTree = "<group>"; };
+		7F23605C21C471EC0035CDFA /* DUOChallengeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengeProtocol.swift; sourceTree = "<group>"; };
+		7F23605F21C48E940035CDFA /* DUOChallengeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengeManager.swift; sourceTree = "<group>"; };
+		7F23606221C493290035CDFA /* DUOChallengeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengeManagerTests.swift; sourceTree = "<group>"; };
+		7F23606421C4A85F0035CDFA /* DUOChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallenge.swift; sourceTree = "<group>"; };
+		7F47D27E21C4C38B00761B54 /* DUOChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengeTests.swift; sourceTree = "<group>"; };
+		7F47D28021C59CA100761B54 /* DUOChallengesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengesFactory.swift; sourceTree = "<group>"; };
+		7F47D28321C5A58500761B54 /* DUOChallengesFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengesFactoryTests.swift; sourceTree = "<group>"; };
+		7F47D28521C5D25700761B54 /* DUOServicesImplementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOServicesImplementer.swift; sourceTree = "<group>"; };
+		7F47D28721C5D59800761B54 /* DUOServicesImplementerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOServicesImplementerTests.swift; sourceTree = "<group>"; };
+		7F47D28A21C5FA6100761B54 /* DUOChallengeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengeInteractor.swift; sourceTree = "<group>"; };
+		7F47D28D21C5FC1F00761B54 /* DUOChallengeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengeInteractorTests.swift; sourceTree = "<group>"; };
+		7F47D28F21C6319A00761B54 /* DUOCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F47D29021C6319A00761B54 /* DUOCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DUOCollectionViewCell.xib; sourceTree = "<group>"; };
+		7F47D29521C6C3E600761B54 /* DUOChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengeViewModel.swift; sourceTree = "<group>"; };
+		7F47D29B21C6D0BB00761B54 /* DUOChallengeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUOChallengeViewModelTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F23601F21C36A1F0035CDFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F23603321C36A240035CDFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F23601921C36A1F0035CDFA = {
+			isa = PBXGroup;
+			children = (
+				7F23602421C36A1F0035CDFA /* DuolingoApp */,
+				7F23603921C36A240035CDFA /* DuolingoAppTests */,
+				7F23602321C36A1F0035CDFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F23602321C36A1F0035CDFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F23602221C36A1F0035CDFA /* DuolingoApp.app */,
+				7F23603621C36A240035CDFA /* DuolingoAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F23602421C36A1F0035CDFA /* DuolingoApp */ = {
+			isa = PBXGroup;
+			children = (
+				7F23604521C371E20035CDFA /* Services */,
+				7F23604D21C372270035CDFA /* Models */,
+				7F23604C21C372220035CDFA /* Views */,
+				7F23604B21C3721F0035CDFA /* Controllers */,
+				7F23604A21C3721C0035CDFA /* Interactors */,
+				7F23604921C372190035CDFA /* Protocols */,
+				7F23604821C372130035CDFA /* Managers */,
+				7F23604721C372100035CDFA /* Creational */,
+				7F23604621C3720B0035CDFA /* Utils */,
+				7F23602521C36A1F0035CDFA /* AppDelegate.swift */,
+				7F23602921C36A1F0035CDFA /* Main.storyboard */,
+				7F23602C21C36A240035CDFA /* Assets.xcassets */,
+				7F23602E21C36A240035CDFA /* LaunchScreen.storyboard */,
+				7F23603121C36A240035CDFA /* Info.plist */,
+			);
+			path = DuolingoApp;
+			sourceTree = "<group>";
+		};
+		7F23603921C36A240035CDFA /* DuolingoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F23603C21C36A240035CDFA /* Info.plist */,
+				7F23605421C37A2F0035CDFA /* DUOLocationTests.swift */,
+				7F23605A21C4717E0035CDFA /* DUOChallengeProtocolTests.swift */,
+				7F23606221C493290035CDFA /* DUOChallengeManagerTests.swift */,
+				7F47D27E21C4C38B00761B54 /* DUOChallengeTests.swift */,
+				7F47D28321C5A58500761B54 /* DUOChallengesFactoryTests.swift */,
+				7F47D28721C5D59800761B54 /* DUOServicesImplementerTests.swift */,
+				7F47D28D21C5FC1F00761B54 /* DUOChallengeInteractorTests.swift */,
+				7F47D29B21C6D0BB00761B54 /* DUOChallengeViewModelTests.swift */,
+			);
+			path = DuolingoAppTests;
+			sourceTree = "<group>";
+		};
+		7F23604521C371E20035CDFA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7F47D28521C5D25700761B54 /* DUOServicesImplementer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7F23604621C3720B0035CDFA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7F23605121C373CD0035CDFA /* DUOLocation.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7F23604721C372100035CDFA /* Creational */ = {
+			isa = PBXGroup;
+			children = (
+				7F47D28021C59CA100761B54 /* DUOChallengesFactory.swift */,
+			);
+			path = Creational;
+			sourceTree = "<group>";
+		};
+		7F23604821C372130035CDFA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7F23605F21C48E940035CDFA /* DUOChallengeManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7F23604921C372190035CDFA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7F23605C21C471EC0035CDFA /* DUOChallengeProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7F23604A21C3721C0035CDFA /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				7F47D28A21C5FA6100761B54 /* DUOChallengeInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		7F23604B21C3721F0035CDFA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F23604E21C372DC0035CDFA /* DUOChallengeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7F23604C21C372220035CDFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F47D28F21C6319A00761B54 /* DUOCollectionViewCell.swift */,
+				7F47D29021C6319A00761B54 /* DUOCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7F23604D21C372270035CDFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7F23606421C4A85F0035CDFA /* DUOChallenge.swift */,
+				7F47D29521C6C3E600761B54 /* DUOChallengeViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F23602121C36A1F0035CDFA /* DuolingoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F23603F21C36A240035CDFA /* Build configuration list for PBXNativeTarget "DuolingoApp" */;
+			buildPhases = (
+				7F23601E21C36A1F0035CDFA /* Sources */,
+				7F23601F21C36A1F0035CDFA /* Frameworks */,
+				7F23602021C36A1F0035CDFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DuolingoApp;
+			productName = DuolingoApp;
+			productReference = 7F23602221C36A1F0035CDFA /* DuolingoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F23603521C36A240035CDFA /* DuolingoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F23604221C36A240035CDFA /* Build configuration list for PBXNativeTarget "DuolingoAppTests" */;
+			buildPhases = (
+				7F23603221C36A240035CDFA /* Sources */,
+				7F23603321C36A240035CDFA /* Frameworks */,
+				7F23603421C36A240035CDFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F23603821C36A240035CDFA /* PBXTargetDependency */,
+			);
+			name = DuolingoAppTests;
+			productName = DuolingoAppTests;
+			productReference = 7F23603621C36A240035CDFA /* DuolingoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F23601A21C36A1F0035CDFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Marcos Garcia";
+				TargetAttributes = {
+					7F23602121C36A1F0035CDFA = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					7F23603521C36A240035CDFA = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 7F23602121C36A1F0035CDFA;
+					};
+				};
+			};
+			buildConfigurationList = 7F23601D21C36A1F0035CDFA /* Build configuration list for PBXProject "DuolingoApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F23601921C36A1F0035CDFA;
+			productRefGroup = 7F23602321C36A1F0035CDFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F23602121C36A1F0035CDFA /* DuolingoApp */,
+				7F23603521C36A240035CDFA /* DuolingoAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F23602021C36A1F0035CDFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F23603021C36A240035CDFA /* LaunchScreen.storyboard in Resources */,
+				7F47D29321C6319A00761B54 /* DUOCollectionViewCell.xib in Resources */,
+				7F23602D21C36A240035CDFA /* Assets.xcassets in Resources */,
+				7F23602B21C36A1F0035CDFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F23603421C36A240035CDFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F47D29421C6319A00761B54 /* DUOCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F23601E21C36A1F0035CDFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F47D28121C59CA100761B54 /* DUOChallengesFactory.swift in Sources */,
+				7F47D29621C6C3E600761B54 /* DUOChallengeViewModel.swift in Sources */,
+				7F47D29121C6319A00761B54 /* DUOCollectionViewCell.swift in Sources */,
+				7F23606521C4A85F0035CDFA /* DUOChallenge.swift in Sources */,
+				7F23605221C373CD0035CDFA /* DUOLocation.swift in Sources */,
+				7F23605D21C471EC0035CDFA /* DUOChallengeProtocol.swift in Sources */,
+				7F23602621C36A1F0035CDFA /* AppDelegate.swift in Sources */,
+				7F47D28621C5D25700761B54 /* DUOServicesImplementer.swift in Sources */,
+				7F23606021C48E940035CDFA /* DUOChallengeManager.swift in Sources */,
+				7F23604F21C372DC0035CDFA /* DUOChallengeViewController.swift in Sources */,
+				7F47D28B21C5FA6100761B54 /* DUOChallengeInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F23603221C36A240035CDFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F47D28921C5D60600761B54 /* DUOServicesImplementer.swift in Sources */,
+				7F23606621C4A85F0035CDFA /* DUOChallenge.swift in Sources */,
+				7F23605E21C471EC0035CDFA /* DUOChallengeProtocol.swift in Sources */,
+				7F47D28C21C5FA6100761B54 /* DUOChallengeInteractor.swift in Sources */,
+				7F47D29C21C6D0BB00761B54 /* DUOChallengeViewModelTests.swift in Sources */,
+				7F23606321C493290035CDFA /* DUOChallengeManagerTests.swift in Sources */,
+				7F47D29221C6319A00761B54 /* DUOCollectionViewCell.swift in Sources */,
+				7F47D29721C6C3E600761B54 /* DUOChallengeViewModel.swift in Sources */,
+				7F47D28E21C5FC1F00761B54 /* DUOChallengeInteractorTests.swift in Sources */,
+				7F47D28821C5D59800761B54 /* DUOServicesImplementerTests.swift in Sources */,
+				7F23605321C373CD0035CDFA /* DUOLocation.swift in Sources */,
+				7F47D27F21C4C38B00761B54 /* DUOChallengeTests.swift in Sources */,
+				7F47D28221C59CB000761B54 /* DUOChallengesFactory.swift in Sources */,
+				7F23605521C37A2F0035CDFA /* DUOLocationTests.swift in Sources */,
+				7F23605B21C4717E0035CDFA /* DUOChallengeProtocolTests.swift in Sources */,
+				7F47D28421C5A58500761B54 /* DUOChallengesFactoryTests.swift in Sources */,
+				7F23606121C48E940035CDFA /* DUOChallengeManager.swift in Sources */,
+				7F23605021C372DC0035CDFA /* DUOChallengeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F23603821C36A240035CDFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F23602121C36A1F0035CDFA /* DuolingoApp */;
+			targetProxy = 7F23603721C36A240035CDFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F23602921C36A1F0035CDFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F23602A21C36A1F0035CDFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7F23602E21C36A240035CDFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F23602F21C36A240035CDFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F23603D21C36A240035CDFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F23603E21C36A240035CDFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F23604021C36A240035CDFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YXC4836V89;
+				INFOPLIST_FILE = DuolingoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosgn1.DuolingoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F23604121C36A240035CDFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YXC4836V89;
+				INFOPLIST_FILE = DuolingoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosgn1.DuolingoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7F23604321C36A240035CDFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YXC4836V89;
+				INFOPLIST_FILE = DuolingoAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosgn1.DuolingoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DuolingoApp.app/DuolingoApp";
+			};
+			name = Debug;
+		};
+		7F23604421C36A240035CDFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YXC4836V89;
+				INFOPLIST_FILE = DuolingoAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosgn1.DuolingoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DuolingoApp.app/DuolingoApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F23601D21C36A1F0035CDFA /* Build configuration list for PBXProject "DuolingoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F23603D21C36A240035CDFA /* Debug */,
+				7F23603E21C36A240035CDFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F23603F21C36A240035CDFA /* Build configuration list for PBXNativeTarget "DuolingoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F23604021C36A240035CDFA /* Debug */,
+				7F23604121C36A240035CDFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F23604221C36A240035CDFA /* Build configuration list for PBXNativeTarget "DuolingoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F23604321C36A240035CDFA /* Debug */,
+				7F23604421C36A240035CDFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F23601A21C36A1F0035CDFA /* Project object */;
+}
