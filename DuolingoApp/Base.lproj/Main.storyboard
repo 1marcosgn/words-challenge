@@ -51,11 +51,10 @@
                                     <constraint firstAttribute="height" constant="20" id="Qii-CK-by8"/>
                                 </constraints>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taj-Od-KcG">
-                                <rect key="frame" x="90.5" y="705" width="233" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taj-Od-KcG">
+                                <rect key="frame" x="0.0" y="704" width="414" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="233" id="MZN-eG-McT"/>
-                                    <constraint firstAttribute="height" constant="47" id="RWg-MC-QaZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="RWg-MC-QaZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
                                 <color key="textColor" red="0.26866135001182556" green="0.65823245048522949" blue="0.93337398767471313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -113,12 +112,14 @@
                             <constraint firstItem="Kc4-0I-2Xm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DYO-TR-OBc"/>
                             <constraint firstItem="taj-Od-KcG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dqh-cO-ou6"/>
                             <constraint firstItem="Kc4-0I-2Xm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GyL-T7-1Xw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="taj-Od-KcG" secondAttribute="trailing" id="JoW-Qp-9ay"/>
                             <constraint firstItem="LM8-Xu-mAM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SDN-mj-9Qs"/>
                             <constraint firstItem="thk-94-D2d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X17-tZ-tfW"/>
                             <constraint firstItem="LM8-Xu-mAM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="X9S-5y-i3a"/>
                             <constraint firstItem="thk-94-D2d" firstAttribute="top" secondItem="LM8-Xu-mAM" secondAttribute="bottom" constant="14" id="arv-cL-1AF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="taj-Od-KcG" secondAttribute="bottom" constant="110" id="cx4-Sg-p9b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="taj-Od-KcG" secondAttribute="bottom" constant="58" id="cx4-Sg-p9b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RFd-A3-Ffl" secondAttribute="trailing" constant="47" id="gjl-sO-ISy"/>
+                            <constraint firstItem="taj-Od-KcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l8N-AN-Mwo"/>
                             <constraint firstItem="RFd-A3-Ffl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rIH-gE-hzu"/>
                             <constraint firstAttribute="bottom" secondItem="Kc4-0I-2Xm" secondAttribute="bottom" constant="-20" id="zWI-Ry-hOD"/>
                         </constraints>

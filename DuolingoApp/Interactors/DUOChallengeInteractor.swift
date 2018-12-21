@@ -102,7 +102,10 @@ internal extension DUOChallengeInteractor {
         /// If challenges are empty, request for more challenges
         if availableChallenges?.count == 0 {
             requestChallenges { (success) in
-                if !success { print("Something went wrong fetching more challenges") }
+                if !success {
+                    print(NSLocalizedString("duo.error.fetchingMoreChallenges", comment: ""))
+                    DUOErrorHandler.handleChallengesErrorFor(ErrorType.reload)
+                }
             }
         }
     }

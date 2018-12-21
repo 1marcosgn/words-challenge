@@ -207,8 +207,10 @@ internal extension DUOChallengeViewController {
                 }
             } else {
                 DispatchQueue.main.async { [unowned self] in
-                    self.targetWordLabel.text = "Something went wrong 😵..."
+                    let errorDescription = NSLocalizedString("duo.error.fetching", comment: "")
+                    self.targetWordLabel.text = errorDescription
                     self.activityIndicator.stopAnimating()
+                    DUOErrorHandler.handleChallengesErrorFor(ErrorType.load)
                 }
             }
         }

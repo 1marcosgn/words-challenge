@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  DuolingoApp
+
+  Created by Marcos Garcia on 12/20/18.
+  Copyright © 2018 Marcos Garcia. All rights reserved.
+*/
+"duo.error.fetching" = "Something went wrong 😵...";
+"duo.error.fetchingMoreChallenges" = "Something went wrong fetching more challenges";
+"duo.correct.challengesCompleted" = "✅ ";
+"duo.correct.challengesAlmostComplete" = "👏 ";
+
