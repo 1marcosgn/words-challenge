@@ -28,13 +28,13 @@ class DUOChallengeInteractorTests: XCTestCase {
         XCTAssertNotNil(DUOChallengeManager.sharedInstance.theCurrentChallenge, "Current challenge should not be nil")
     }
     
-    func test_createChallengesWith_ValidInformation_ShouldUpdate_AvailableChallenges() {
+    func test_makeChallengesWith_ValidInformation_ShouldUpdate_AvailableChallenges() {
         /// Given
         let sut = DUOChallengeInteractor.init()
         let mockArray = [DUOChallengeTests.init().getMockDictionary(), DUOChallengeTests.init().getMockDictionary()]
         
         /// When
-        sut.createChallengesWith(mockArray)
+        sut.makeChallengesWith(mockArray)
         
         /// Then
         XCTAssertNotNil(sut.availableChallenges, "Available challenges should not be nil")
@@ -49,7 +49,7 @@ class DUOChallengeInteractorTests: XCTestCase {
         let mockLocation = DUOLocation.init(word_locations: [["0,2,0,3,0,4": "soy"]])
         
         /// When
-        sut.createChallengesWith(mockArray)
+        sut.makeChallengesWith(mockArray)
         let match = sut.evaluateSelection(mockLocation)
         
         /// Then
@@ -65,7 +65,7 @@ class DUOChallengeInteractorTests: XCTestCase {
         let mockLocation = DUOLocation.init(word_locations: [["1,2,1,3,1,4": "hoy"]])
         
         /// When
-        sut.createChallengesWith(mockArray)
+        sut.makeChallengesWith(mockArray)
         let match = sut.evaluateSelection(mockLocation)
         
         /// Then
@@ -81,7 +81,7 @@ class DUOChallengeInteractorTests: XCTestCase {
         let mockLocation = DUOLocation.init(word_locations: [["0,2,0,3,0,4": "soy"]])
         
         /// When
-        sut.createChallengesWith(mockArray)
+        sut.makeChallengesWith(mockArray)
         let match1 = sut.evaluateSelection(mockLocation)
         let match2 = sut.evaluateSelection(mockLocation)
         let match3 = sut.evaluateSelection(mockLocation)

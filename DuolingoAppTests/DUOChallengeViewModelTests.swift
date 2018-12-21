@@ -54,10 +54,9 @@ class DUOChallengeViewModelTests: XCTestCase {
     func test_setUpSections_Should_Contain_ValidElements() {
         /// Given
         let mockChallenge = DUOChallenge.init(challenge: DUOChallengeTests().getMockDictionary())
-        let sut = DUOChallengeViewModel.init(challenge: mockChallenge)
         
         /// When
-        sut.setUpSections()
+        let sut = DUOChallengeViewModel.init(challenge: mockChallenge)
         
         /// Then
         XCTAssertNotNil(sut.arrayOfSections, "The array of sections should not be nil")

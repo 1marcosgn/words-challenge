@@ -12,7 +12,7 @@
 
 import UIKit
 
-public class DUOChallengeInteractor: NSObject {
+public class DUOChallengeInteractor {
     /// Array of elements selected by the user from the grid
     public var userSelectedElements = [Int]()
     
@@ -21,10 +21,6 @@ public class DUOChallengeInteractor: NSObject {
     
     /// Property that indicates the current challenge
     public var currentChallenge: DUOChallenge?
-    
-    override init() {
-        super.init()
-    }
 
     /// Method that uses the Service Implementer to gather challenges from an external API
     public func requestChallenges(completion: @escaping (Bool) -> ()) {
@@ -32,7 +28,7 @@ public class DUOChallengeInteractor: NSObject {
         serviceImpl.findChallenges { (success) in
             
             if success {
-                self.createChallengesWith(serviceImpl.duoChallenges)
+                self.makeChallengesWith(serviceImpl.duoChallenges)
                 completion(true)
             } else {
                 completion(false)
@@ -41,15 +37,15 @@ public class DUOChallengeInteractor: NSObject {
     }
     
     /// Uses the Factory Class to create challenges based on the response
-    public func createChallengesWith(_ content: [[String: Any]]?) {
+    public func makeChallengesWith(_ content: [[String: Any]]?) {
         let factory = DUOChallengesFactory.shared()
         
         guard let challenges = factory.getChallenges(duoChallenges: content) else {
             return
         }
         
-        self.availableChallenges = challenges
-        self.setCurrentChallenge()
+        availableChallenges = challenges
+        setCurrentChallenge()
     }
 }
 
@@ -77,7 +73,7 @@ public extension DUOChallengeInteractor {
         if DUOChallengeManager.sharedInstance.challengeLocationMatchesWith(userSelection: manualSelection) {
             
             if DUOChallengeManager.sharedInstance.allMatchesFound() {
-                self.updateChallenges()
+                updateChallenges()
             }
             
             matches = true
@@ -91,21 +87,21 @@ public extension DUOChallengeInteractor {
 internal extension DUOChallengeInteractor {
     /// This method updates the available challenges, current challenge and requests more challenges if it's required
     internal func updateChallenges() {
-        guard let numberOfChallenges = self.availableChallenges?.count else {
+        guard let numberOfChallenges = availableChallenges?.count else {
             return
         }
         
         if numberOfChallenges > 1 {
-            self.availableChallenges?.removeFirst()
-            DUOChallengeManager.sharedInstance.theCurrentChallenge = self.availableChallenges?.first
+            availableChallenges?.removeFirst()
+            DUOChallengeManager.sharedInstance.theCurrentChallenge = availableChallenges?.first
         } else {
-            self.availableChallenges = [DUOChallenge]()
+            availableChallenges = [DUOChallenge]()
             DUOChallengeManager.sharedInstance.theCurrentChallenge = nil
         }
         
         /// If challenges are empty, request for more challenges
-        if self.availableChallenges?.count == 0 {
-            self.requestChallenges { (success) in
+        if availableChallenges?.count == 0 {
+            requestChallenges { (success) in
                 if !success { print("Something went wrong fetching more challenges") }
             }
         }
@@ -113,8 +109,8 @@ internal extension DUOChallengeInteractor {
     
     /// Set the current challenge into the DUOChallengeManager
     internal func setCurrentChallenge() {
-        DUOChallengeManager.sharedInstance.theCurrentChallenge = self.availableChallenges?.first
-        DUOChallengeManager.sharedInstance.numberOfMatches = self.availableChallenges?.first?.word_locations?.count ?? 0
+        DUOChallengeManager.sharedInstance.theCurrentChallenge = availableChallenges?.first
+        DUOChallengeManager.sharedInstance.numberOfMatches = availableChallenges?.first?.word_locations?.count ?? 0
     }
 }
 
@@ -123,7 +119,7 @@ public extension DUOChallengeInteractor {
     
     /// Initializes the array of selected elements
     public func initializeSelectedElements() {
-        self.userSelectedElements = [Int]()
+        userSelectedElements = [Int]()
     }
     
     /**
@@ -131,7 +127,7 @@ public extension DUOChallengeInteractor {
      - parameter selection: The selected elements
      */
     public func updateSelectedElementsWith(_ selection: Int) {
-        self.userSelectedElements.append(selection)
+        userSelectedElements.append(selection)
     }
     
     /**
@@ -141,7 +137,7 @@ public extension DUOChallengeInteractor {
      */
     public func getDuoLocationFrom(_ gridLocations:[[Int]]) -> DUOLocation? {
         // Remove duplicated elements from 'userSelectedElements'
-        let uniqueElements = self.getUniqueElementsFor(self.userSelectedElements)
+        let uniqueElements = getUniqueElementsFor(userSelectedElements)
         
         // Get the arrays from 'gridLocations' based on the results in 'userSelectedElements'
         var tmpArrayForLocations = [[Int]]()

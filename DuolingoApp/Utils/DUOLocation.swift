@@ -27,7 +27,7 @@ public class DUOLocation: NSObject {
      */
     public init(word_locations: [[String: String]]) {
         super.init()
-        self.word_locations = self.transformLocations(locations: word_locations)
+        self.word_locations = transformLocations(locations: word_locations)
     }
     
     /**

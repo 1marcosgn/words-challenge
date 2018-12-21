@@ -40,18 +40,15 @@ public final class DUOChallengeManager: NSObject {
      - parameter word_locations: Array of dictionaries that represents the location of the words
      */
     public func challengeLocationMatchesWith(userSelection: DUOLocation) -> Bool {
-        self.selected_location = userSelection
+        selected_location = userSelection
         
         var match = false
         
-        guard let locations = self.challengeLocations else {
+        guard let locations = challengeLocations else {
             return false
         }
         
         for location in locations {
-            //matches = self.selected_location?.word_locations == location.word_locations
-            //if matches { DUOChallengeManager.sharedInstance.numberOfMatches -= 1 }
-            
             if self.selected_location?.word_locations == location.word_locations {
                 DUOChallengeManager.sharedInstance.numberOfMatches -= 1
                 match = true
@@ -69,10 +66,10 @@ public final class DUOChallengeManager: NSObject {
 internal extension DUOChallengeManager {
     /// Resets Manager properties to default values
     func reset() {
-        self.targetsCount = 0
-        self.targetWords = nil
-        self.challengeLocations = nil
-        self.selected_location = nil
+        targetsCount = 0
+        targetWords = nil
+        challengeLocations = nil
+        selected_location = nil
     }
 }
 

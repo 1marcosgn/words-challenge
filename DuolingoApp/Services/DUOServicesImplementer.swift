@@ -17,17 +17,14 @@ private struct Services {
     static let find_challenges = "https://s3.amazonaws.com/duolingo-data/s3/js2/find_challenges.txt"
 }
 
-public class DUOServicesImplementer: NSObject {
+public class DUOServicesImplementer {
     /// Stores temporary the downloaded challenges
     public var duoChallenges: [[String: Any]]?
     
-    override init() {
-        super.init()
-    }
     
     /// Call Web Service to fetch data .. this should be an async task
     public func findChallenges(completion: @escaping (Bool) -> ()) {
-        self.downloadFileFromURL { (success) -> Void in
+        downloadFileFromURL { (success) -> Void in
             completion(success)
         }
     }
@@ -79,7 +76,7 @@ internal extension DUOServicesImplementer {
         }
     
         for line in lines {
-            guard let dictionary = self.convertToDictionary(text: line) else {
+            guard let dictionary = convertToDictionary(text: line) else {
                 return nil
             }
             challenges.append(dictionary)
@@ -99,8 +96,7 @@ internal extension DUOServicesImplementer {
         guard let theContent = content else {
             return
         }
-        
-        self.duoChallenges = theContent
+        duoChallenges = theContent
     }
     
     /**

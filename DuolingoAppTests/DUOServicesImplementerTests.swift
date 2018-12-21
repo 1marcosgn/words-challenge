@@ -68,12 +68,11 @@ class DUOServicesImplementerTests: XCTestCase {
 
 }
 
-class MockString: NSObject {
+class MockString {
     var string: String?
     
-    override init() {
-        super.init()
-        self.string = self.setUpString()
+    init() {
+        string = setUpString()
     }
     
     func setUpString() -> String {

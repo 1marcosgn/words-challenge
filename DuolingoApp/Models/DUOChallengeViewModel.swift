@@ -10,41 +10,51 @@
 
 import UIKit
 
-public class DUOChallengeViewModel: NSObject {
+public class DUOChallengeViewModel {
     /// Current challenge
-    public var challenge: DUOChallenge?
+    public let challenge: DUOChallenge?
     
     /// get the array of elements
-    public var arrayOfWords = [[String]]()
+    public let arrayOfWords: [[String]]?
+
+    /// get the array of sections
+    public let arrayOfSections: [[String]]?
     
     /// get the array of positions
     public var arrayOfLocations: [[Int]]?
-
-    /// get the array of sections
-    public var arrayOfSections:[[String]]?
     
     /// get the array of each location
-    public var arrayOfLocationSections:[[[Int]]]?
+    public var arrayOfLocationSections: [[[Int]]]?
     
     /// Model Initializer
     public init(challenge: DUOChallenge) {
-        super.init()
         self.challenge = challenge
-        self.arrayOfWords = challenge.character_grid
-        self.arrayOfLocations = [[Int]]()
-        self.setUpSections()
-        self.setUpLocationSections()
+        arrayOfWords = challenge.character_grid
+        arrayOfSections = arrayOfWords
+        setUpArrayOfLocations()
+        setUpLocationSections()
     }
 }
 
 internal extension DUOChallengeViewModel {
+    /**
+     Get each word from the array
+     - returns: an array of words
+     */
+    func getWords() -> [[String]] {
+        guard let rows = arrayOfWords else {
+            return [[String]]()
+        }
+        return rows
+    }
+    
     /**
      Gets an array of words formatted
      - returns: a final array of words
      */
     func getArrayOfWordsFromatted() -> [String] {
         var finalArray = [String]()
-        for row in self.arrayOfWords {
+        for row in getWords() {
             for word in row {
                 finalArray.append(word)
             }
@@ -58,13 +68,12 @@ internal extension DUOChallengeViewModel {
      */
     func setUpArrayOfLocations() {
         var locations = [[Int]]()
-        for (indexWord, row) in self.arrayOfWords.enumerated() {
+        for (indexWord, row) in getWords().enumerated() {
             for (indexRow, _) in row.enumerated() {
-                //locations.append([indexWord, indexRow])
                 locations.append([indexRow, indexWord])
             }
         }
-        self.arrayOfLocations = locations
+        arrayOfLocations = locations
     }
     
     /**
@@ -72,16 +81,7 @@ internal extension DUOChallengeViewModel {
      - returns: number of sections
      */
     func getNumberOfSections() -> Int{
-        return self.arrayOfWords.count
-    }
-    
-    /**
-     Configures the array of sections with the next format:
-        [ ["z", "n", "w", "f", "m", "\\u00e9"],
-        ["d", "\\u00f3", "q", "w", "n", "e"].. ]
-     */
-    func setUpSections() {
-        self.arrayOfSections = self.arrayOfWords
+        return getWords().count
     }
     
     /**
@@ -90,13 +90,13 @@ internal extension DUOChallengeViewModel {
           [[1,1], [1,2], [1,3], [1,4], [1,5], [1,6]].. ]
      */
     func setUpLocationSections() {
-        let numberOfSections = self.getNumberOfSections()
-        self.setUpArrayOfLocations()
+        let numberOfSections = getNumberOfSections()
+        setUpArrayOfLocations()
         
         guard let result = arrayOfLocations?.chunked(by: numberOfSections) else {
             return
         }
-        self.arrayOfLocationSections = result
+        arrayOfLocationSections = result
     }
 }
 

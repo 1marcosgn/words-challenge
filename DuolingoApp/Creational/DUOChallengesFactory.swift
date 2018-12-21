@@ -12,7 +12,7 @@
 
 import UIKit
 
-public class DUOChallengesFactory: NSObject {
+public class DUOChallengesFactory {
     
     private static var sharedDUOChallengesFactory = DUOChallengesFactory()
     
@@ -29,7 +29,7 @@ public class DUOChallengesFactory: NSObject {
     public func getChallenges(duoChallenges: [[String: Any]]?) -> [DUOChallenge]? {
         var availableChallenges = [DUOChallenge]()
         
-        guard let challenges = duoChallenges as [[String: Any]]? else {
+        guard let challenges = duoChallenges else {
             return nil
         }
         

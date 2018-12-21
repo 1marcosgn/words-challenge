@@ -21,9 +21,9 @@ private struct Constants {
     static let targetLanguage = "target_language"
 }
 
-public class DUOChallenge: NSObject, DUOChallengeProtocol {
+public class DUOChallenge: DUOChallengeProtocol {
     /// Stores the dictionary with challenge information
-    var challengeInfo = [String: Any]()
+    let challengeInfo: [String: Any]
     
     public var source_language: String = ""
     public var word: String = ""
@@ -33,9 +33,8 @@ public class DUOChallenge: NSObject, DUOChallengeProtocol {
     
     /// Initializer for DUOChallenge class, receives a parsed dictionary with the elements of the challenge
     public init(challenge: [String: Any]) {
-        super.init()
-        self.challengeInfo = challenge
-        self.setUpChallengeProperties()
+        challengeInfo = challenge
+        setUpChallengeProperties()
     }
 }
 
@@ -44,9 +43,9 @@ public extension DUOChallenge {
     /// Method to set up properties of the ChallengeManager with current challenge information
     public func setUpChallengeManager() {
         let manager = DUOChallengeManager.sharedInstance
-        manager.targetsCount = self.word_locations?.count ?? 0
-        manager.targetWords = [self.word]
-        manager.challengeLocations = self.word_locations
+        manager.targetsCount = word_locations?.count ?? 0
+        manager.targetWords = [word]
+        manager.challengeLocations = word_locations
     }
 }
 
@@ -54,11 +53,11 @@ public extension DUOChallenge {
 internal extension DUOChallenge {
     /// Method to update properties of the challenge with the information from the dictionary
     internal func setUpChallengeProperties() {
-        self.source_language = getSourceLanguage()
-        self.word = getWord()
-        self.character_grid = getCharacterGrid()
-        self.word_locations = getWordLocations()
-        self.target_language = getTargetLanguage()
+        source_language = getSourceLanguage()
+        word = getWord()
+        character_grid = getCharacterGrid()
+        word_locations = getWordLocations()
+        target_language = getTargetLanguage()
     }
     
     /// Returns 'sourceLanguage' value
